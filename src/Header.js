@@ -16,14 +16,12 @@ function Header() {
       />
   </Link>
 
-  {/* Search box */}
   <div className="header_search">
     <input type="text" className="header_searchInput" />
     <SearchIcon className="header_searchIcon" />
   </div>
-  {/* 3 Links on the right */}
+
   <div className="header_nav">
-    {/* 1st link */}
     <Link to="/login" className="header_link">
       <div className="header_option">
         <span className="header_optionLineOne">Hello,</span>
@@ -31,7 +29,6 @@ function Header() {
       </div>
     </Link>
 
-    {/* 2nd link */}
     <Link to="/login" className="header_link">
       <div className="header_option">
         <span className="header_optionLineOne">Return</span>
@@ -39,7 +36,6 @@ function Header() {
       </div>
     </Link>
 
-    {/* 3rd link */}
     <Link to="/login" className="header_link">
       <div className="header_option">
         <span className="header_optionLineOne">Your</span>
@@ -47,12 +43,9 @@ function Header() {
       </div>
     </Link>
 
-    {/* 4th link */}
     <Link to="/checkout" className="header_link">
       <div className="header_optionBasket">
-        {/* Shopping basket icon */}
         <ShoppingBasketIcon />
-        {/* Number of items in the basket */}
         <span className="header_optionLineTwo header_basketCount">0</span>
       </div>
     </Link>
