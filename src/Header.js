@@ -15,7 +15,7 @@ function Header() {
   </Link>
 
   {/* Search box */}
-
+  <input type="text" className="header_searchInput" />
   {/* 3 Links on the right */}
 
   {/* Basket icon with number */}
