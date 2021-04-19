@@ -21,7 +21,42 @@ function Header() {
     <SearchIcon className="header_searchIcon" />
   </div>
   {/* 3 Links on the right */}
+  <div className="header_nav">
+    {/* 1st link */}
+    <Link to="/login" className="header_link">
+      <div className="header_option">
+        <span className="header_optionLineOne">Hello,</span>
+        <span className="header_optionLineTwo">Sign In</span>
+      </div>
+    </Link>
 
+    {/* 2nd link */}
+    <Link to="/login" className="header_link">
+      <div className="header_option">
+        <span className="header_optionLineOne">Return</span>
+        <span className="header_optionLineTwo">& Orders</span>
+      </div>
+    </Link>
+
+    {/* 3rd link */}
+    <Link to="/login" className="header_link">
+      <div className="header_option">
+        <span className="header_optionLineOne">Your</span>
+        <span className="header_optionLineTwo">Prime</span>
+      </div>
+    </Link>
+
+    {/* 4th link */}
+    <Link to="/checkout">
+      <div className="header_optionBasket">
+        {/* Shopping basket icon */}
+
+        {/* Number of items in the basket */}
+
+      </div>
+    </Link>
+
+  </div>
   {/* Basket icon with number */}
     </nav>
 }
