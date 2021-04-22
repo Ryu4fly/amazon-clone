@@ -3,7 +3,7 @@ export const initialState = {
 };
 
 function reducer(state, action) {
-  switch(action.type) {
+  switch(action) {
     case 'ADD_TO_BASKET':
       // Logic for adding item to basket
       break;
