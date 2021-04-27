@@ -1,5 +1,11 @@
 export const initialState = {
-  basket: [],
+  basket: [{
+    id:'016016',
+      title: 'Echo Show 5 Smart Display with Alexa, Charcoal',
+      price: 5980,
+      rating: 4,
+      image: "https://images-na.ssl-images-amazon.com/images/I/51eKAZbhzyL._AC_SL1000_.jpg"
+  }],
   user: null,
 };
 
@@ -13,8 +19,23 @@ const reducer = (state, action) => {
         basket: [...state.basket, action.item]
       };
     case 'REMOVE_FROM_BASKET':
-      // Logic for removing item from basket
-      return { state };
+      // Logic for removing item from basket...
+      let newBasket = [...state.basket];
+
+      const index = state.basket.findIndex((basketItem) => basketItem.id === action.id);
+
+      if (index >= 0) {
+        // item exists in basket, remove it...
+        newBasket.splice(index, 1);
+      } else {
+        console.warn(
+          `Cant remove product (id: ${action.id} as its not in basket.`
+        );
+      }
+      return {
+        ...state,
+        basket: newBasket
+      };
     default:
       return state;
   }
